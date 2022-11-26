@@ -1,0 +1,149 @@
+/*
+
+- Font size: 15px
+
+### Font
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
+
+- Family: [Big Shoulders Display](https://fonts.google.com/specimen/Big+Shoulders+Display)
+- Weights: 700
+
+
+*/
+
+$--bright-orange: #e38826;
+$--dark-cyan: #006970;
+$--very-dark-cyan: #004241;
+
+$--transparent-white-paragraphs: #ffffffbf;
+$--background-headings-buttons: #f2f2f2;
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.cards {
+  display: flex;
+
+  &__container {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__card {
+    max-width: 30rem;
+    padding: 4.5rem;
+
+    display: flex;
+    flex-direction: column;
+
+    &--sedans {
+      background-color: $--bright-orange;
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem;
+    }
+    &--suvs {
+      background-color: $--dark-cyan;
+    }
+    &--luxury {
+      background-color: $--very-dark-cyan;
+      border-top-right-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+    }
+  }
+
+  &__icon {
+    width: 7rem;
+    margin-bottom: 4rem;
+  }
+
+  &__title {
+    font-family: "Big Shoulders Display", cursive;
+    text-transform: uppercase;
+    color: $--background-headings-buttons;
+    font-size: 3.8rem;
+    margin-bottom: 3rem;
+  }
+
+  &__paragraph {
+    color: $--transparent-white-paragraphs;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+    line-height: 1.7;
+
+    margin-bottom: 8rem;
+  }
+  &__link {
+    background-color: $--background-headings-buttons;
+    font-size: 1.5rem;
+    padding: 1.5rem 3rem;
+    border-radius: 5rem;
+    border: 2px solid transparent;
+    margin-right: auto;
+    transition: all 0.2s;
+
+    &--sedans {
+      color: orange;
+    }
+    &--suvs {
+      color: $--dark-cyan;
+    }
+    &--luxury {
+      color: $--very-dark-cyan;
+    }
+
+    &:hover {
+      cursor: pointer;
+      border: 2px solid $--background-headings-buttons;
+      color: $--background-headings-buttons;
+      background-color: transparent;
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .cards {
+    margin: 10rem 2rem;
+
+    flex-direction: column;
+
+    &__container {
+      height: auto;
+      width: 100%;
+    }
+
+    &__card {
+      min-width: 32rem;
+
+      &--sedans {
+        border-top-right-radius: 1rem;
+        border-bottom-left-radius: 0;
+      }
+      &--suvs {
+      }
+      &--luxury {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 1rem;
+      }
+    }
+
+    &__icon {
+      width: 6rem;
+    }
+
+    &__paragraph {
+      margin-bottom: 3rem;
+    }
+
+    &__link {
+      padding: 1rem 2.2rem;
+    }
+  }
+}

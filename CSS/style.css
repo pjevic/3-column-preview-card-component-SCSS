@@ -1,0 +1,117 @@
+html {
+  font-size: 62.5%;
+  box-sizing: inherit; }
+
+*,
+h1 {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  height: 100vh; }
+
+h1 {
+  font-size: inherit;
+  font-weight: inherit; }
+
+a {
+  text-decoration: none; }
+
+/*
+
+- Font size: 15px
+
+### Font
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
+
+- Family: [Big Shoulders Display](https://fonts.google.com/specimen/Big+Shoulders+Display)
+- Weights: 700
+
+
+*/
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem; }
+
+.cards {
+  display: flex; }
+  .cards__container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .cards__card {
+    max-width: 30rem;
+    padding: 4.5rem;
+    display: flex;
+    flex-direction: column; }
+    .cards__card--sedans {
+      background-color: #e38826;
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem; }
+    .cards__card--suvs {
+      background-color: #006970; }
+    .cards__card--luxury {
+      background-color: #004241;
+      border-top-right-radius: 1rem;
+      border-bottom-right-radius: 1rem; }
+  .cards__icon {
+    width: 7rem;
+    margin-bottom: 4rem; }
+  .cards__title {
+    font-family: "Big Shoulders Display", cursive;
+    text-transform: uppercase;
+    color: #f2f2f2;
+    font-size: 3.8rem;
+    margin-bottom: 3rem; }
+  .cards__paragraph {
+    color: #ffffffbf;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+    line-height: 1.7;
+    margin-bottom: 8rem; }
+  .cards__link {
+    background-color: #f2f2f2;
+    font-size: 1.5rem;
+    padding: 1.5rem 3rem;
+    border-radius: 5rem;
+    border: 2px solid transparent;
+    margin-right: auto;
+    transition: all 0.2s; }
+    .cards__link--sedans {
+      color: orange; }
+    .cards__link--suvs {
+      color: #006970; }
+    .cards__link--luxury {
+      color: #004241; }
+    .cards__link:hover {
+      cursor: pointer;
+      border: 2px solid #f2f2f2;
+      color: #f2f2f2;
+      background-color: transparent; }
+
+@media screen and (max-width: 950px) {
+  .cards {
+    margin: 10rem 2rem;
+    flex-direction: column; }
+    .cards__container {
+      height: auto;
+      width: 100%; }
+    .cards__card {
+      min-width: 32rem; }
+      .cards__card--sedans {
+        border-top-right-radius: 1rem;
+        border-bottom-left-radius: 0; }
+      .cards__card--luxury {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 1rem; }
+    .cards__icon {
+      width: 6rem; }
+    .cards__paragraph {
+      margin-bottom: 3rem; }
+    .cards__link {
+      padding: 1rem 2.2rem; } }
